@@ -239,7 +239,7 @@ li {
     
     .container{
        width: 80%;
-       top: -105px;
+       top: 15px;
        position: relative;
        margin: 0 auto;
        gap: 15px;
@@ -312,7 +312,7 @@ li {
     .done-btn {
         width: 20px;
         height: 20px;
-        margin: 0;
+        margin: 2px;
     }
 
     .done-btn::after {
