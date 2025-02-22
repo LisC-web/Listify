@@ -5,9 +5,7 @@ body {
     animation: fadeIn 1.5s ease-in-out;
 }
 
-* {
-    border: 1px solid red;
-}
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
@@ -234,6 +232,10 @@ li {
 }
 
 @media (max-width: 480px) {
+
+    body {
+        overflow-x: hidden;
+    }
     
     .container{
        width: 90%;
