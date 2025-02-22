@@ -239,7 +239,7 @@ li {
     
     .container{
        width: 80%;
-       top: 15px;
+       top: -105px;
        position: relative;
        margin: 0 auto;
        gap: 15px;
@@ -296,11 +296,12 @@ li {
     }
 
     li {
-        width: 100%;
+        width: 75%;
         margin-right: 10%;
         display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        border-radius: 40px;
+        gap: 5px;
+        flex-wrap:wrap-reverse
     }
 
     .task-text, .task-time {
@@ -322,6 +323,7 @@ li {
 
     .delete-btn {
         font-size: 18px;
+        margin: 0;
     }
 }
 

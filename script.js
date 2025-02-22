@@ -4,9 +4,12 @@ const taskList = document.getElementById("taskList");
 const colorChange = document.getElementById("colorButton")
 const taskTimeInput = document.getElementById("task-time");
 
-function addTask() {
-    const taskText = taskInput.value.trim().toUpperCase();
-    const taskTime = taskTimeInput.value.trim()
+document.addEventListener("DOMContentLoaded", loadTasks);
+
+
+function addTask(taskText = "", taskTime = "", isDone = false) {
+    if (typeof taskText !== "string" || !taskText) taskText = taskInput.value.trim().toUpperCase();
+    if (typeof taskTime !== "string" || !taskTime) taskTime = taskTimeInput.value.trim();
 
 
     if(taskText !== "") {
@@ -19,7 +22,8 @@ function addTask() {
         taskTextSpan.classList.add("task-text");
 
         const taskTimeSpan = document.createElement("span");
-        taskTimeSpan.textContent = ` - Due: ${new Date(taskTime).toLocaleString()}`;
+        const dueDate = new Date(taskTime);
+        taskTimeSpan.textContent =` - Due: ${isNaN(dueDate) ? "Invalid Date" : dueDate.toLocaleString()}`;
         taskTimeSpan.classList.add("task-time");
 
 
@@ -34,6 +38,7 @@ function addTask() {
                     taskTimeSpan.style.display = "none"; // Hide due time
                     doneBtn.style.display = "none";
                     li.appendChild(deleteBtn);
+                    saveTasks();
                 }, 200);
                 
             }
@@ -45,6 +50,7 @@ function addTask() {
     deleteBtn.classList.add("delete-btn"); 
     deleteBtn.onclick = function () {
         li.remove();
+        saveTasks();
     };
     
      li.appendChild(doneBtn);
@@ -52,6 +58,7 @@ function addTask() {
      li.appendChild(taskTimeSpan);
      li.appendChild(deleteBtn);
      taskList.appendChild(li);
+     saveTasks();
 
      taskInput.value = "";
      taskTimeInput.value = ""
@@ -60,7 +67,7 @@ function addTask() {
 }
 };
 
-addBtn.addEventListener("click", addTask)
+addBtn.addEventListener("click", () => addTask());
 
 taskInput.addEventListener("keypress", function (event) {
     if(event.key === "Enter") {
@@ -73,6 +80,27 @@ function changeColor() {
     
 }
 
+function saveTasks() {
+    let tasks = [];
+    document.querySelectorAll("#taskList li").forEach(li => {
+        let text = li.querySelector(".task-text").textContent;
+        let time = li.querySelector(".task-time").textContent.replace(" - Due: ", "").trim();
+        let isDone = li.querySelector(".done-btn").checked;
+        tasks.push({ text, time, isDone});  
+    });
+
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function loadTasks() {
+    let savedTasks = localStorage.getItem("tasks");
+    if(savedTasks) {
+        JSON.parse(savedTasks).forEach(task => {
+            addTask(task.text, task.time, task.isDone)
+        })
+    } 
+}
+
 
 colorChange.addEventListener("click", changeColor);
 
@@ -81,3 +109,5 @@ const taskTime = new Date(taskTimeInput.value);
 if(taskTime < currentDate) {
     console.log('Date needs to be higher than the current date');
 }
+
+document.addEventListener("DOMContentLoaded", loadTasks);
