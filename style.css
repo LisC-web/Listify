@@ -5,9 +5,6 @@ body {
     animation: fadeIn 1.5s ease-in-out;
 }
 
-* {
-    border: 1px solid red;
-}
 
 
 
@@ -26,6 +23,23 @@ body {
     25% { transform: rotate(5deg); }
     50% { transform: rotate(-5deg); }
     75% { transform: rotate(3deg); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-10px); }
+}
+
+.hidden {
+    animation: fadeOut 0.5s forwards;
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s forwards;
+}
+
+#seeLess-btn:hover {
+    animation: bounce 0.5s;
 }
 
 .container {
@@ -140,6 +154,7 @@ img {
     max-width: 100%;
     flex-wrap: wrap;
     gap: 50px;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s;
 }
 
 

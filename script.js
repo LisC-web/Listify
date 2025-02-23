@@ -46,6 +46,27 @@ function addTask(taskText = "", taskTime = "", isDone = false) {
            
         }
 
+        const seeLessButton = document.getElementById("seeLess-btn")
+        seeLessButton.addEventListener("click", () => toggleVisibility());
+
+        function toggleVisibility() {
+         
+            
+            if(li.style.visibility === "hidden") {
+                li.style.visibility = "visible";
+                seeLessButton.textContent = "See Less";
+                taskList.classList.add("fadeIn");
+            } else {
+
+                setTimeout(() => {
+                    li.style.visibility = "hidden";
+                }, 500);
+                taskList.classList.remove("fadeIn");
+                taskList.classList.add("fadeOut")
+                seeLessButton.textContent = "Show more"
+            }
+        }
+        
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "X";
     deleteBtn.classList.add("delete-btn"); 
