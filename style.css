@@ -5,6 +5,9 @@ body {
     animation: fadeIn 1.5s ease-in-out;
 }
 
+* {
+    box-sizing: border-box;
+}
 
 
 @keyframes fadeIn {
@@ -137,7 +140,9 @@ img {
 li {
     display: flex;
     justify-content: space-evenly;
-    width: 65%;
+    width: 85%;
+    padding: 2%;
+    text-align: center;
     font-weight: 700;
     border-radius: 70px;
     font-size: 30px;
@@ -152,14 +157,16 @@ li {
 
 .done-btn {
     appearance: none;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    padding: 0.5%;
+    height: 25px;
     background-color: rgb(126, 82, 139);
     border-radius: 50%;
     display: flex;
     color: aliceblue;
     justify-self: center;
     align-self: center;
+    margin-right: 3%;
     cursor: pointer; 
     transition: background-color 0.6s ease, box-shadow 0.3s ease;
 
@@ -167,7 +174,7 @@ li {
 .done-btn::after {
     content: "✔";
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .done-btn:checked {
@@ -196,10 +203,17 @@ li {
 .task-text {
     font-weight: 700;
     font-size: 30px;
-    line-height: 1.2;
+    line-height: 58px;
     text-align: center;
     font-family: "Urbanist", serif;
     color: #5e5c5e;;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 90%;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 }
 
 .task-time {
@@ -234,10 +248,12 @@ li {
 
 @media (max-width: 480px) {
 
-    body {
+    body, html {
         overflow-x: hidden;
+        width: 100%;
     }
-    
+
+  
     .container{
        width: 80%;
        top: 15px;
@@ -282,7 +298,7 @@ li {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 1.9em;
+        height: 1em;
         background-color: rgb(126, 82, 139);
         font-weight: 700;
         font-size: 1em;
@@ -303,7 +319,7 @@ li {
         border-radius: 40px;
         line-height: 1.2;
         gap: 0px;
-        flex-wrap: wrap-reverse
+        flex-wrap: wrap-reverse;
     }
 
     .task-text, .task-time {
@@ -320,7 +336,7 @@ li {
     .done-btn::after {
         content: "✔";
         margin: 0 auto;
-        font-size: 12px;
+        font-size: 8px;
         color: white;
     }
 
