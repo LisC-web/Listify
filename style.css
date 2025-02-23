@@ -5,9 +5,6 @@ body {
     animation: fadeIn 1.5s ease-in-out;
 }
 
-* {
-    box-sizing: border-box;
-}
 
 
 @keyframes fadeIn {
@@ -46,13 +43,13 @@ body {
   display: flex;
   
   padding: 15px;
-  width: 42%;
+  width: 52%;
   justify-content: space-around;
 }
 
 #taskInput {
     width: 100%;
-    height: 2em;
+    height: 1.5em;
     padding: 0.5em;
     border-radius: 70px;
     background-color: rgb(231, 221, 211);
@@ -70,16 +67,21 @@ body {
     font-family: "Urbanist", serif;
     font-weight: 700;
     font-size: 24px;
+    display: flex;
+   
     line-height: 58px;
     text-align: center;
     color: #5e5c5e;
 }
 
 #addBtn {
-    border-radius: 100px;
-    width: 20%;
-    margin-left: -19%;
-    height: inherit;
+    border-radius: 70px;
+    width: 30%;
+    padding: 0.5em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 2.3em;
     background-color: rgb(126, 82, 139);
     color: #d8bfd8;
     font-weight: 700;
@@ -140,9 +142,9 @@ img {
 li {
     display: flex;
     justify-content: space-evenly;
-    width: 85%;
-    padding: 2%;
-    text-align: center;
+    align-items: center;
+    width: 65%;
+    padding: 2% 2%;
     font-weight: 700;
     border-radius: 70px;
     font-size: 30px;
@@ -155,18 +157,25 @@ li {
     animation: fadeIn 0.6s ease-in-out forwards;
 }
 
+.completed-task {
+    color: green;
+ 
+    font-family: "Anton", sans-serif;
+    letter-spacing: 3px;
+}
+
 .done-btn {
     appearance: none;
-    width: 25px;
+   
+    width: 30px;
     padding: 0.5%;
-    height: 25px;
+    height: 30px;
     background-color: rgb(126, 82, 139);
     border-radius: 50%;
-    display: flex;
+    display: grid;
     color: aliceblue;
     justify-self: center;
     align-self: center;
-    margin-right: 3%;
     cursor: pointer; 
     transition: background-color 0.6s ease, box-shadow 0.3s ease;
 
@@ -174,7 +183,7 @@ li {
 .done-btn::after {
     content: "✔";
     margin: 0 auto;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .done-btn:checked {
@@ -186,7 +195,7 @@ li {
 .delete-btn {
     background-color: transparent;
     border: none;
-    font-size: 40px;
+    font-size: 30px;
     margin-top: 5px;
     font-weight: 10000;
     padding: 5px;
@@ -202,38 +211,38 @@ li {
 
 .task-text {
     font-weight: 700;
-    font-size: 30px;
-    line-height: 58px;
-    text-align: center;
+    font-size: 25px;
+    max-width: 60%;
+    padding: 0.2% 2%;
+    line-height: 1.3;
+    text-align: start;
     font-family: "Urbanist", serif;
     color: #5e5c5e;;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 90%;
-    justify-content: center;
-    flex-wrap: wrap;
-    
+    word-wrap: break-word;
+    text-overflow: ellipsis;
 }
 
 .task-time {
     color: #5e5c5e;;
     font-weight: 700;
     font-size: 30px;
-    line-height: 58px;
+    line-height: 1.3;
+    word-wrap: break-word;
     text-align: center;
+    padding: 0 4%;
     font-family: "Urbanist", serif;
+    text-overflow: ellipsis;
 }
 
 #colorButton {
     font-size: 1em;
     width: 40%;
     text-align: center;
+    justify-content: center;
     color: #5e5c5e;
     top: 40px;
     padding: 20px;
     border-radius: 70px;
-    text-align: center;
     display: flex;
     justify-self: end;
     margin: 0 auto;
@@ -248,12 +257,10 @@ li {
 
 @media (max-width: 480px) {
 
-    body, html {
+    body {
         overflow-x: hidden;
-        width: 100%;
     }
-
-  
+    
     .container{
        width: 80%;
        top: 15px;
@@ -298,7 +305,7 @@ li {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 1em;
+        height: 1.9em;
         background-color: rgb(126, 82, 139);
         font-weight: 700;
         font-size: 1em;
@@ -313,13 +320,13 @@ li {
     }
 
     li {
-        width: 75%;
+        width: 100%;
         margin-right: 10%;
         display: flex;
         border-radius: 40px;
         line-height: 1.2;
         gap: 0px;
-        flex-wrap: wrap-reverse;
+        flex-wrap:wrap-reverse
     }
 
     .task-text, .task-time {
@@ -328,20 +335,19 @@ li {
     }
 
     .done-btn {
-        width: 15px;
-        height: 15px;
+        width: 1px;
+        height: 20px;
         margin: 2px;
     }
 
     .done-btn::after {
         content: "✔";
         margin: 0 auto;
-        font-size: 8px;
-        color: white;
+        font-size: 15px;
     }
 
     .delete-btn {
-        font-size: 15px;
+        font-size: 18px;
         margin: 0;
     }
 }

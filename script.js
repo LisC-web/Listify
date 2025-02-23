@@ -34,6 +34,7 @@ function addTask(taskText = "", taskTime = "", isDone = false) {
         doneBtn.onclick = function () {
             if(doneBtn.checked) {
                 setTimeout(() => {
+                    li.classList.add("completed-task");
                     li.textContent = `${taskText} - Done`;
                     taskTimeSpan.style.display = "none"; // Hide due time
                     doneBtn.style.display = "none";
