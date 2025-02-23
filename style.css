@@ -111,7 +111,7 @@ label {
     border: none;
     font-weight: 700;
     font-size: 30px;
-    line-height: 58px;
+    line-height: 1.2;
     text-align: center;
     font-family: "Urbanist", serif;
 }
@@ -141,7 +141,7 @@ li {
     font-weight: 700;
     border-radius: 70px;
     font-size: 30px;
-    line-height: 58px;
+    line-height: 18px;
     text-align: center;
     font-family: "Urbanist", serif;
     background-color: rgb(231, 221, 211);
@@ -196,7 +196,7 @@ li {
 .task-text {
     font-weight: 700;
     font-size: 30px;
-    line-height: 58px;
+    line-height: 1.2;
     text-align: center;
     font-family: "Urbanist", serif;
     color: #5e5c5e;;
@@ -219,6 +219,7 @@ li {
     top: 40px;
     padding: 20px;
     border-radius: 70px;
+    text-align: center;
     display: flex;
     justify-self: end;
     margin: 0 auto;
@@ -290,7 +291,7 @@ li {
     
     #task-time {
         width: 70%;
-        font-size: 1em;
+        font-size: 16px;
         color: #5e5c5e;
         height: 4em;
     }
@@ -300,29 +301,31 @@ li {
         margin-right: 10%;
         display: flex;
         border-radius: 40px;
-        gap: 5px;
-        flex-wrap:wrap-reverse
+        line-height: 1.2;
+        gap: 0px;
+        flex-wrap: wrap-reverse
     }
 
     .task-text, .task-time {
         margin: 0;
-        font-size: 16px;
+        font-size: 13px;
     }
 
     .done-btn {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
         margin: 2px;
     }
 
     .done-btn::after {
         content: "✔";
         margin: 0 auto;
-        font-size: 15px;
+        font-size: 12px;
+        color: white;
     }
 
     .delete-btn {
-        font-size: 18px;
+        font-size: 15px;
         margin: 0;
     }
 }
