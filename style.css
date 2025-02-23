@@ -160,7 +160,7 @@ li {
 
 .completed-task {
     color: green;
- 
+    line-height: 1.2;
     font-family: "Anton", sans-serif;
     letter-spacing: 3px;
 }
