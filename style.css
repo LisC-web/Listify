@@ -5,6 +5,10 @@ body {
     animation: fadeIn 1.5s ease-in-out;
 }
 
+* {
+    border: 1px solid red;
+}
+
 
 
 @keyframes fadeIn {
@@ -160,7 +164,7 @@ li {
 
 .completed-task {
     color: green;
-    line-height: 1.2;
+    line-height: 1.5;
     font-family: "Anton", sans-serif;
     letter-spacing: 3px;
 }
