@@ -31,12 +31,54 @@ body {
 }
 
 .hidden {
-    animation: fadeOut 0.5s forwards;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    height: 0;
+    overflow: hidden;
+    transition: visibility 0s linear 0.5s;
 }
 
 .fadeIn {
     animation: fadeIn 0.5s forwards;
 }
+
+
+.fadeOut {
+    animation: fadeOut 0.5s forwards;
+}
+
+#taskList {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 50px;
+    transition: opacity 0.5s ease-in-out, opacity 0.3s;
+}
+
+#taskList.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    height: 0;
+    overflow: hidden;
+}
+
+
+#seeLess-btn {
+    background-color: rgb(231, 221, 211);
+    padding: 2%;
+    border-radius: 50px;
+    border: none;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    color: lightcoral;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 
 #seeLess-btn:hover {
     animation: bounce 0.5s;
@@ -44,8 +86,8 @@ body {
 
 .container {
     background-color: whitesmoke;
-    
-    
+    animation: fadeIn 1.5s ease-in-out;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
     border-radius: 70px;
     display: flex;
     flex-direction: column;
@@ -53,9 +95,21 @@ body {
     align-items: center;
     width: 50%;
     margin: 2% auto;
+    max-height: 250px;
     gap: 10px;
-    animation: fadeIn 1.2s ease-in-out forwards;
+    
 }
+
+.expand {
+    max-height: fit-content; /* Expanded height */
+    padding-bottom: 40px;
+}
+
+.contract {
+    max-height: 800px; /* Shrinks when "See Less" is clicked */
+    padding-bottom: 5px;
+}
+
 
 .task-container {
   display: flex;
@@ -147,15 +201,6 @@ img {
 
 }
 
-#taskList {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 100%;
-    flex-wrap: wrap;
-    gap: 50px;
-    transition: max-height 0.5s ease-in-out, opacity 0.3s;
-}
 
 
 
@@ -355,15 +400,18 @@ li {
     }
 
     .done-btn {
-        width: 1px;
+        width: 20px;
         height: 20px;
         margin: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .done-btn::after {
         content: "✔";
         margin: 0 auto;
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .delete-btn {

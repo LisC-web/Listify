@@ -15,7 +15,7 @@ function addTask(taskText = "", taskTime = "", isDone = false) {
     if(taskText !== "") {
         
         const li = document.createElement("li");
-      
+        toggleVisibility()
         
         const taskTextSpan = document.createElement("span");
         taskTextSpan.textContent = taskText;
@@ -46,26 +46,6 @@ function addTask(taskText = "", taskTime = "", isDone = false) {
            
         }
 
-        const seeLessButton = document.getElementById("seeLess-btn")
-        seeLessButton.addEventListener("click", () => toggleVisibility());
-
-        function toggleVisibility() {
-         
-            
-            if(li.style.visibility === "hidden") {
-                li.style.visibility = "visible";
-                seeLessButton.textContent = "See Less";
-                taskList.classList.add("fadeIn");
-            } else {
-
-                setTimeout(() => {
-                    li.style.visibility = "hidden";
-                }, 500);
-                taskList.classList.remove("fadeIn");
-                taskList.classList.add("fadeOut")
-                seeLessButton.textContent = "Show more"
-            }
-        }
         
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "X";
@@ -88,6 +68,36 @@ function addTask(taskText = "", taskTime = "", isDone = false) {
     alert("Please enter a task.");
 }
 };
+
+const container = document.querySelector(".container")
+const seeLessButton = document.getElementById("seeLess-btn")
+seeLessButton.addEventListener("click", () => toggleVisibility());
+
+
+function toggleVisibility() {
+         
+            
+    if(taskList.classList.contains("hidden")) {
+        taskList.classList.remove("hidden", "fadeOut");
+        taskList.classList.add("fadeIn");
+
+        container.classList.remove("contract");
+        container.classList.add("expand");
+
+        seeLessButton.textContent = "See Less";
+    } else {
+        taskList.classList.remove("fadeIn");
+        taskList.classList.add("fadeOut");
+        container.classList.remove("expand");
+        container.classList.add("contract")
+        setTimeout(() => {
+            taskList.classList.add("hidden");
+        
+        }, 500);
+      
+        seeLessButton.textContent = "Show more"
+    }
+}
 
 addBtn.addEventListener("click", () => addTask());
 
