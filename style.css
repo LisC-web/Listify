@@ -2,7 +2,12 @@ body {
     width: 100%;
     height: 100%;
     background-color: #d8bfd8;
+    overflow-x: hidden;
     animation: fadeIn 1.5s ease-in-out;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 
@@ -320,6 +325,101 @@ li {
 }
 
 
+@media (max-width: 1280px) {
+
+    body, html {
+        overflow-x: hidden;
+        height: 100%;
+    }
+
+    #task-time {
+        width: 60%;
+        padding: 1%;
+    }
+
+    .task-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin: 0 auto;
+    }
+    
+    #taskInput {
+        width: 94%;
+    }
+
+    #addBtn {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+}
+
+@media (max-width: 1024px) {
+
+    body, html {
+        overflow-x: hidden;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    #task-time {
+        width: 60%;
+        padding: 1%;
+    }
+
+    img {
+        width: 80%;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+    }
+    .task-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin: 0 auto;
+    }
+    
+    #taskInput {
+        width: 94%;
+    }
+
+    #addBtn {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    li {
+        width: 80%
+    }
+
+    .task-text, .task-time {
+        font-size: 16px;
+    }
+    
+
+    .done-btn {
+        width: 24px;
+        height: 20px;
+        margin: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .done-btn::after {
+        content: "✔";
+        margin: 0;
+        font-size: 13px;
+    }
+}
+
+
+
 @media (max-width: 768px) {
 
     body, html {
@@ -327,13 +427,7 @@ li {
         height: 100%;
         width: 100%;
     }
-
-    * {
-        border: 1px solid black;
-    }
-
-
-    
+ 
     .container{
        width: 80%;
        top: 15px;
@@ -367,6 +461,7 @@ li {
         width: 80%;
     }
 
+
 }
 
 
@@ -389,7 +484,7 @@ li {
     }
 
     .task-container {
-        width: 100%;
+        width: 80%;
         display: flex;
         flex-direction: row;
     }
@@ -466,6 +561,7 @@ li {
     .done-btn::after {
         content: "✔";
         margin: 0 auto;
+        color: white;
         font-size: 12px;
     }
 
