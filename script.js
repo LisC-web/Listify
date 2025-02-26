@@ -12,12 +12,12 @@ function addTask(taskText = "", taskTime = "", isDone = false) {
     if (typeof taskTime !== "string" || !taskTime) taskTime = taskTimeInput.value.trim();
 
 
-    window.onload(toggleVisibility());
+
 
     if(taskText !== "") {
         
         const li = document.createElement("li");
-      
+        toggleVisibility();
         
         const taskTextSpan = document.createElement("span");
         taskTextSpan.textContent = taskText;
