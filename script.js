@@ -17,7 +17,6 @@ function addTask(taskText = "", taskTime = "", isDone = false) {
     if(taskText !== "") {
         
         const li = document.createElement("li");
-        toggleVisibility();
         
         const taskTextSpan = document.createElement("span");
         taskTextSpan.textContent = taskText;
