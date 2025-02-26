@@ -6,7 +6,7 @@ body {
 }
 
 * {
-    border: 1px solid red;
+    border: 1px solid blue;
 }
 
 
@@ -97,7 +97,7 @@ body {
     align-items: center;
     width: 50%;
     margin: 2% auto;
-    max-height: 250px;
+    max-height: 800px;
     gap: 10px;
     
 }
@@ -326,6 +326,10 @@ li {
 
     body, html {
         overflow-x: hidden;
+    }
+
+    * {
+        border: 1px solid blue;
     }
     
     .container{
