@@ -322,7 +322,7 @@ li {
 
 @media (max-width: 480px) {
 
-    body {
+    body, html {
         overflow-x: hidden;
     }
     
