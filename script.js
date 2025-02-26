@@ -143,4 +143,7 @@ if(taskTime < currentDate) {
     console.log('Date needs to be higher than the current date');
 }
 
-document.addEventListener("DOMContentLoaded", loadTasks);
+document.addEventListener("DOMContentLoaded", () => {
+    loadTasks();
+    toggleVisibility();
+})
