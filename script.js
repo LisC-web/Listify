@@ -5,7 +5,7 @@ const colorChange = document.getElementById("colorButton")
 const taskTimeInput = document.getElementById("task-time");
 
 document.addEventListener("DOMContentLoaded", loadTasks);
-
+toggleVisibility();
 
 function addTask(taskText = "", taskTime = "", isDone = false) {
     if (typeof taskText !== "string" || !taskText) taskText = taskInput.value.trim().toUpperCase();
