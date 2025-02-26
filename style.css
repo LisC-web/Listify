@@ -2,7 +2,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: #d8bfd8;
-    overflow-x: hidden;
+    overflow: hidden;
     animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -328,7 +328,7 @@ li {
 @media (max-width: 1280px) {
 
     body, html {
-        overflow-x: hidden;
+        overflow: hidden;
         height: 100%;
     }
 
@@ -358,7 +358,7 @@ li {
 @media (max-width: 1024px) {
 
     body, html {
-        overflow-x: hidden;
+        overflow: hidden;
         height: 100%;
         width: 100%;
 
@@ -423,7 +423,7 @@ li {
 @media (max-width: 768px) {
 
     body, html {
-        overflow-x: hidden;
+        overflow: hidden;
         height: 100%;
         width: 100%;
     }
@@ -468,7 +468,7 @@ li {
 @media (max-width: 480px) {
 
     body, html {
-        overflow-x: hidden;
+        overflow: hidden;
         height: 100%;
     }
 
