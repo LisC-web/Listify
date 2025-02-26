@@ -5,9 +5,6 @@ body {
     animation: fadeIn 1.5s ease-in-out;
 }
 
-* {
-    border: 1px solid blue;
-}
 
 
 @keyframes fadeIn {
@@ -322,10 +319,62 @@ li {
     animation: bounce 0.4s ease-in-out;
 }
 
+
+@media (max-width: 768px) {
+
+    body, html {
+        overflow-x: hidden;
+        height: 100%;
+        width: 100%;
+    }
+
+    * {
+        border: 1px solid black;
+    }
+
+
+    
+    .container{
+       width: 80%;
+       top: 15px;
+       position: relative;
+       margin: 0 auto;
+       gap: 15px;
+       background-color: whitesmoke;
+    }
+
+    .task-container {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;   
+    }
+
+    #taskInput {
+        width: 93%;
+        margin: 0;
+    }
+
+    #addBtn {
+        width: 100%;
+    }
+
+    #task-time {
+        width: 60%;
+        padding: 1%;
+    }
+
+    li {
+        width: 80%;
+    }
+
+}
+
+
 @media (max-width: 480px) {
 
     body, html {
         overflow-x: hidden;
+        height: 100%;
     }
 
     * {
