@@ -11,7 +11,7 @@ html {
 }
 
 * {
-    border: 1px solid orange;
+    border: 1px solid red;
 }
 
 
@@ -362,6 +362,10 @@ li {
         width: 100%;
         margin: 0 auto;
     }
+
+    #taskList {
+        display: none;
+    }
     
 }
 
@@ -396,6 +400,11 @@ li {
     
     #taskInput {
         width: 94%;
+    }
+
+    
+    #taskList {
+        display: none;
     }
 
     #addBtn {
@@ -467,6 +476,11 @@ li {
         padding: 1%;
     }
 
+    
+    #taskList {
+        display: none;
+    }
+
     li {
         width: 80%;
     }
@@ -515,6 +529,11 @@ li {
         font-size: 1em;
         border: none;
        
+    }
+
+    
+    #taskList {
+        display: none;
     }
 
     #taskInput::placeholder {
