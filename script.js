@@ -145,5 +145,4 @@ if(taskTime < currentDate) {
 
 document.addEventListener("DOMContentLoaded", () => {
     loadTasks();
-    toggleVisibility();
 })
