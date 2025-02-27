@@ -78,9 +78,11 @@ seeLessButton.addEventListener("click", () => toggleVisibility());
 function toggleVisibility() {
          
             
-    if(taskList.classList.contains("hidden")) {
+    if(taskList.classList.contains("hidden") || taskList.classList.contains("hidden")) {
         taskList.classList.remove("hidden", "fadeOut");
         taskList.classList.add("fadeIn");
+        
+        taskList.style.display = "flex";
 
         container.classList.remove("contract");
         container.classList.add("expand");
@@ -93,7 +95,7 @@ function toggleVisibility() {
         container.classList.add("contract")
         setTimeout(() => {
             taskList.classList.add("hidden");
-        
+            taskList.style.display = "none"; 
         }, 500);
       
         seeLessButton.textContent = "Show more"
@@ -145,4 +147,5 @@ if(taskTime < currentDate) {
 
 document.addEventListener("DOMContentLoaded", () => {
     loadTasks();
+    taskList.style.display = "none";
 })
