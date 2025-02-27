@@ -136,6 +136,13 @@ function loadTasks() {
     } 
 }
 
+const deleteAllButton = document.getElementById("deleteAll-btn");
+
+deleteAllButton.addEventListener("click", function () {
+    taskList.innerHTML = ""; // Remove all task elements
+    localStorage.removeItem("tasks"); // Clear tasks from local storage
+});
+
 
 colorChange.addEventListener("click", changeColor);
 
