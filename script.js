@@ -115,7 +115,7 @@ function changeColor() {
     
 }
 
-/*
+
 
 function saveTasks() {
     let tasks = [];
@@ -137,7 +137,7 @@ function loadTasks() {
         })
     } 
 }
-    */
+    
 
 const deleteAllButton = document.getElementById("deleteAll-btn");
 
@@ -155,7 +155,7 @@ if(taskTime < currentDate) {
     console.log('Date needs to be higher than the current date');
 }
 
-/* document.addEventListener("DOMContentLoaded", () => {
+ document.addEventListener("DOMContentLoaded", () => {
     loadTasks();
     taskList.style.display = "none";
-}) */
+}) 
