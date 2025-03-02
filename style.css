@@ -623,6 +623,22 @@ li {
         font-size: 18px;
         margin: 0;
     }
+
+
+     .btn-container {
+      gap: 5px;
+    }
+
+
+    #seeLess-btn {
+        font-size: 13px;
+        padding: 1% 2%;
+     }
+
+     #deleteAll-btn {
+        font-size: 13px;
+        padding: 1% 2%;
+     }
 }
 
 
