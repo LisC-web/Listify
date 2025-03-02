@@ -4,7 +4,7 @@ const taskList = document.getElementById("taskList");
 const colorChange = document.getElementById("colorButton")
 const taskTimeInput = document.getElementById("task-time");
 
-document.addEventListener("DOMContentLoaded", loadTasks);
+
 
 
 function addTask(taskText = "", taskTime = "", isDone = false) {
@@ -78,15 +78,12 @@ seeLessButton.addEventListener("click", () => toggleVisibility());
 function toggleVisibility() {
          
             
-    if(taskList.classList.contains("hidden") || taskList.classList.contains("hidden")) {
+    if(taskList.classList.contains("hidden")) {
         taskList.classList.remove("hidden", "fadeOut");
         taskList.classList.add("fadeIn");
-        
         taskList.style.display = "flex";
-
         container.classList.remove("contract");
         container.classList.add("expand");
-
         seeLessButton.textContent = "See Less";
     } else {
         taskList.classList.remove("fadeIn");
@@ -157,5 +154,6 @@ if(taskTime < currentDate) {
 
  document.addEventListener("DOMContentLoaded", () => {
     loadTasks();
-    taskList.style.display = "none";
+    taskList.classList.add("hidden");
+    seeLessButton.textContent = "Show more";
 }) 

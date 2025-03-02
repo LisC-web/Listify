@@ -10,9 +10,6 @@ html {
     overflow-x: hidden;
 }
 
-* {
-    border: 1px solid blue;
-}
 
 
 @keyframes fadeIn {
@@ -73,6 +70,29 @@ html {
     overflow: hidden;
 }
 
+.btn-container {
+    display: flex;
+    gap: 1.5em;
+    width: 80%;
+    justify-content: center;
+}
+
+#deleteAll-btn {
+    background-color: rgb(231, 221, 211);
+    padding: 3%;
+    font-size: 0.3em;
+    white-space: none;
+    
+    border-radius: 50px;
+    border: none;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    color: lightcoral;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
 
 #seeLess-btn {
     background-color: rgb(231, 221, 211);
@@ -91,11 +111,16 @@ html {
     animation: bounce 0.5s;
 }
 
+#deleteAll-btn:hover {
+    animation: bounce 0.5s;
+}
+
 .container {
     background-color: whitesmoke;
     animation: fadeIn 1.5s ease-in-out;
     transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
     border-radius: 70px;
+    padding: 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;

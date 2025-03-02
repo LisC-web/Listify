@@ -13,8 +13,6 @@ rel="stylesheet">
 rel="stylesheet">
     </head>
     <body>
-
-      <button id="deleteAll-btn">Delete All</button>
         <button id="colorButton">Change Theme Color</button>
         <div class="container">
           <div class="image-container">
@@ -26,7 +24,10 @@ rel="stylesheet">
           </div>
           <label for="task-time">Set Time:</label>
           <input type="datetime-local" id="task-time" required>
-          <button id="seeLess-btn">See less</button>
+          <div class="btn-container">
+            <button id="seeLess-btn">See less</button>
+            <button id="deleteAll-btn">Delete All</button>
+          </div>
           <ul id="taskList"></ul> 
         </div> 
         <script src="script.js"></script>
