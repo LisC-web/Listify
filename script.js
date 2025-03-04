@@ -93,6 +93,8 @@ function toggleVisibility() {
         setTimeout(() => {
             taskList.classList.add("hidden");
             taskList.style.display = "none"; 
+            container.classList.remove("expand");
+            container.classList.add("contract");
         }, 500);
       
         seeLessButton.textContent = "Show more"

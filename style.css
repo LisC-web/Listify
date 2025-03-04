@@ -138,8 +138,9 @@ html {
 }
 
 .contract {
-    max-height: 850px; /* Shrinks when "See Less" is clicked */
+    max-height: fit-content; /* Shrinks when "See Less" is clicked */
     padding-bottom: 5px;
+    overflow: hidden;
 }
 
 
